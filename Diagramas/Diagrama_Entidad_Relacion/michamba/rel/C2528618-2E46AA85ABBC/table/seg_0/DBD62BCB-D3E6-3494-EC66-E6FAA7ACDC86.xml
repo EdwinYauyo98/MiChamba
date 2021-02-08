@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DBD62BCB-D3E6-3494-EC66-E6FAA7ACDC86" name="CONTRATO">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>8B9D97AD-1380-063F-63C0-DCBA502594F4</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_contrato" id="19D668AF-ACC5-8341-C624-A1774DC7C1EA">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>FA8A0141-1737-6A56-A933-1AFFF1E73B57</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado" id="774E9EFC-CB27-064C-C46F-91D02B2BDCE8">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>7069A198-CE50-BC85-885C-2D3F467B1A6A</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_cliente" id="D019A01F-35DA-EF65-7F58-B90915855DC0">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>8014E797-0FD9-563D-DBA3-6DBF84250069</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E31E3A3B-85EE-E379-A0E5-C7D565E8510B" referredColumn="3B64F55A-5850-4722-D130-30D75895C650"/>
+</associations>
+</Column>
+<Column name="id_worker" id="B6C5C5DB-100C-925E-587D-90CD26CBECCF">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>FC8A1BE3-C092-68E8-C3B9-29902DCF6770</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3EFD9E68-08D5-06E1-E70A-828402F88BE4" referredColumn="1F1354FD-8E05-8187-DD38-E5F3A561DD19"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F06F79D5-FFA4-5E13-E01F-BCF5C6D517C5" name="CONTRATO_PK">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>6B48ED0B-9A89-2553-92CA-8748078A49A6</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="19D668AF-ACC5-8341-C624-A1774DC7C1EA"/>
+<colUsage columnID="D019A01F-35DA-EF65-7F58-B90915855DC0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AB81F7A8-3CFB-DEC0-D909-57305ED93F6B" name="CONTRATO_WORKERS_FK">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>EE14F0CB-9148-0E29-50A1-9002FE3A9DAD</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B6C5C5DB-100C-925E-587D-90CD26CBECCF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A0368D48-9115-4502-95FE-B78712C41528" name="CONTRATO_CLIENTES_FK">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>BED52905-09D2-0BF8-F472-B7C9AAFF609B</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D019A01F-35DA-EF65-7F58-B90915855DC0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

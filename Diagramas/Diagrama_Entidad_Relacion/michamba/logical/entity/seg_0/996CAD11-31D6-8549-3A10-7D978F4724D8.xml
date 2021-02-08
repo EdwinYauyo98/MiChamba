@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="996CAD11-31D6-8549-3A10-7D978F4724D8" name="CLIENTES">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:07 UTC</createdTime>
+<generatorID>CC3DB947-F159-2180-2216-4548C4994A07</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id cliente" id="1BCEB3CF-F4C5-7C2F-BFE0-975BFA47BC59">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:07 UTC</createdTime>
+<generatorID>266DA650-45B7-0EB0-D3CD-6310501A53B9</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id usuario" id="700B4DD6-F1C3-7A87-A9ED-54296C376F33">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:08 UTC</createdTime>
+<generatorID>88E44FE5-3D71-F19B-DAFF-2E770B189CA4</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<referedAttribute>B4DE08D0-0198-C8D8-E0FD-5DFA5A95CC60</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="53A6DDA4-02E0-ED86-CB02-EB0E9477C2EB" name="CLIENTESv1 PK">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:07 UTC</createdTime>
+<generatorID>5779E517-9071-6455-08AB-DE9DD9C7B5A7</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1BCEB3CF-F4C5-7C2F-BFE0-975BFA47BC59</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

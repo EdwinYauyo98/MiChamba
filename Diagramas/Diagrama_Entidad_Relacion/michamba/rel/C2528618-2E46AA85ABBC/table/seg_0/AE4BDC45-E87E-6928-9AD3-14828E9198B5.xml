@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AE4BDC45-E87E-6928-9AD3-14828E9198B5" name="SERVICIOS">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>74147A77-CCD7-6A83-3253-D1EFC92C6A71</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_oficio" id="856E686D-F3A0-4B39-D975-54D0876664CF">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>D637A6FE-301F-E435-A7B8-D602D0AE4BEF</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="68DF2FCD-0EB6-8D68-5B1B-78D3EDA508E4">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>4004B204-4AE7-3B5A-5661-47C258B85A39</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tarifa" id="B93C4677-A05C-5D9A-EFA0-D2E015FC37A4">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>8BD4B7B9-D8E2-DFDF-2CA0-31BC488DFE4D</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2F1AF9C3-BEE4-B526-45A4-7452E5226459" name="SERVICIOS_PK">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>201BA56F-3933-E041-6A42-051CAB67A2FE</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="856E686D-F3A0-4B39-D975-54D0876664CF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C8C0EA0B-00D7-CD1A-C0EC-19355CE4F142" name="WORKERS">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>E6997E82-6F7F-F2D1-1866-D8BF33ED7C29</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_worker" id="1F1354FD-8E05-8187-DD38-E5F3A561DD19">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>F820E15D-CC09-5A55-A8F3-A44E6095BCA1</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_oficio" id="07629FAF-4956-B253-36BE-D7C5B229867C">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>9E73ED75-4F84-5C6D-FA40-0DE7A495EF7A</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="25F3F1F8-8E1F-6674-1171-BEB1279C9473" referredColumn="856E686D-F3A0-4B39-D975-54D0876664CF"/>
+</associations>
+</Column>
+<Column name="id_usuario" id="F513D927-5D02-E97D-4252-20E90B51B3E7">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>1CA7555F-12EE-FABC-77B1-3DCD1B2E1368</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="27A7D9EF-D847-37DB-2175-322D132F31A6" referredColumn="7BC082CE-154C-5105-8AE7-A99E6722B4DE"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AF109A0D-E4CF-0555-344E-8D6FAD93EFCD" name="WORKERS_PK">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>62322AB3-477A-F8DC-207E-1BF768A7F9A8</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1F1354FD-8E05-8187-DD38-E5F3A561DD19"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="256905A0-D29E-A249-7F4C-C2FBE2E809FC" name="WORKERS__IDX">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<ownerDesignName>michamba</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>410AD303-090E-0EE9-2347-254380CD78CA</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="F513D927-5D02-E97D-4252-20E90B51B3E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="01AE7A14-E124-7F77-FA5B-AAF071A89BE6" name="WORKERS_SERVICIOS_FK">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>60870FB7-90DB-3AEC-28AB-C962B0675733</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07629FAF-4956-B253-36BE-D7C5B229867C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C0659505-FD59-0D01-C59D-5D4A84CBD4BA" name="WORKERS_USUARIOS_FK">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>410AD303-090E-0EE9-2347-254380CD78CA</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F513D927-5D02-E97D-4252-20E90B51B3E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

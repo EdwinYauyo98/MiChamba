@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8B9D97AD-1380-063F-63C0-DCBA502594F4" name="CONTRATO">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:07 UTC</createdTime>
+<generatorID>253F16FC-66E7-256C-C219-3EFD47BAEDA6</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id contrato" id="FA8A0141-1737-6A56-A933-1AFFF1E73B57">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:07 UTC</createdTime>
+<generatorID>D3161F7D-F91A-1578-7424-6E2C01D8FA2D</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estado" id="7069A198-CE50-BC85-885C-2D3F467B1A6A">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:07 UTC</createdTime>
+<generatorID>30D5B22A-50B4-B3D2-49FC-8C75813AC428</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id cliente" id="8014E797-0FD9-563D-DBA3-6DBF84250069">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:51:51 UTC</createdTime>
+<generatorID>BED52905-09D2-0BF8-F472-B7C9AAFF609B</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<referedAttribute>1BCEB3CF-F4C5-7C2F-BFE0-975BFA47BC59</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id worker" id="FC8A1BE3-C092-68E8-C3B9-29902DCF6770">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:53:03 UTC</createdTime>
+<generatorID>EE14F0CB-9148-0E29-50A1-9002FE3A9DAD</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<referedAttribute>F820E15D-CC09-5A55-A8F3-A44E6095BCA1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6B48ED0B-9A89-2553-92CA-8748078A49A6" name="CONTRATOv1 PK">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:07 UTC</createdTime>
+<generatorID>F6FC084B-281B-761F-78E1-AF205FD0F559</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FA8A0141-1737-6A56-A933-1AFFF1E73B57</attributeRef>
+<attributeRef>8014E797-0FD9-563D-DBA3-6DBF84250069</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

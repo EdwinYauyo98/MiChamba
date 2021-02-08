@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="confirma contrato" directorySegmentName="seg_0" id="EE14F0CB-9148-0E29-50A1-9002FE3A9DAD">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:53:03 UTC</createdTime>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<sourcePk>62322AB3-477A-F8DC-207E-1BF768A7F9A8</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>E6997E82-6F7F-F2D1-1866-D8BF33ED7C29</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8B9D97AD-1380-063F-63C0-DCBA502594F4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

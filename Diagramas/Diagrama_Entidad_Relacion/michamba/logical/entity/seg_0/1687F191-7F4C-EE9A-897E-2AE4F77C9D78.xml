@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1687F191-7F4C-EE9A-897E-2AE4F77C9D78" name="USUARIOS">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:07 UTC</createdTime>
+<generatorID>E83497F2-E066-EF1F-4E8E-14DF5A404EE8</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id usuario" id="B4DE08D0-0198-C8D8-E0FD-5DFA5A95CC60">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:07 UTC</createdTime>
+<generatorID>CCBE70BD-1563-2E9C-A315-C7EC0EA4483E</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dni" id="343FE1D3-C7B9-99A2-58F0-CF1651CD590E">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:07 UTC</createdTime>
+<generatorID>7CD99BD9-910B-59CE-287D-BE6EFD5B42DD</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="FE66AFFA-22E2-E219-B53C-64AD021B89D0">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:07 UTC</createdTime>
+<generatorID>A20C6FB1-3268-1869-A559-64318A72FCC1</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="apellido" id="7CDADFD4-3714-FE76-4D98-BE44E6E1BC37">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:08 UTC</createdTime>
+<generatorID>923CBDD5-FBC6-E9EE-C15E-4452F2544A7A</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="contacto" id="0385AC40-F29D-BAED-DDC2-64E4DB8EDA49">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:08 UTC</createdTime>
+<generatorID>5F38106B-2E87-7557-F2A9-7E748CBA9B34</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="url foto" id="4FD95421-2D95-4040-7F5D-BA3043593AC2">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:08 UTC</createdTime>
+<generatorID>81D6F157-58E7-E411-D4FD-98FBC0C74927</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A9067355-472D-FA1A-C843-7735356D37EF" name="USUARIOSv1 PK">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:08 UTC</createdTime>
+<generatorID>22CFC662-4B65-55AC-8703-8830CD5F21B3</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B4DE08D0-0198-C8D8-E0FD-5DFA5A95CC60</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

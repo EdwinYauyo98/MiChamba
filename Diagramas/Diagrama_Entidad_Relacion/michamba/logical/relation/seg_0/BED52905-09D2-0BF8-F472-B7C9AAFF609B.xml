@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="genera contrato" directorySegmentName="seg_0" id="BED52905-09D2-0BF8-F472-B7C9AAFF609B">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:51:51 UTC</createdTime>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<sourcePk>53A6DDA4-02E0-ED86-CB02-EB0E9477C2EB</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>996CAD11-31D6-8549-3A10-7D978F4724D8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8B9D97AD-1380-063F-63C0-DCBA502594F4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

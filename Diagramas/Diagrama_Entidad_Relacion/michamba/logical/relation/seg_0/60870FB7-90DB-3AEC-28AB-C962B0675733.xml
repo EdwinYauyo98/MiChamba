@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ofrece" directorySegmentName="seg_0" id="60870FB7-90DB-3AEC-28AB-C962B0675733">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:54:11 UTC</createdTime>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<sourcePk>201BA56F-3933-E041-6A42-051CAB67A2FE</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>74147A77-CCD7-6A83-3253-D1EFC92C6A71</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E6997E82-6F7F-F2D1-1866-D8BF33ED7C29</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

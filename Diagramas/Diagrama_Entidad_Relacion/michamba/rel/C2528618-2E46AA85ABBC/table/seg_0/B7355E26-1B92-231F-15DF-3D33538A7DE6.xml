@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B7355E26-1B92-231F-15DF-3D33538A7DE6" name="CLIENTES">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>996CAD11-31D6-8549-3A10-7D978F4724D8</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_cliente" id="3B64F55A-5850-4722-D130-30D75895C650">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>1BCEB3CF-F4C5-7C2F-BFE0-975BFA47BC59</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_usuario" id="2188D703-754D-DD67-B401-B37041A8C81C">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>700B4DD6-F1C3-7A87-A9ED-54296C376F33</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7A5082B1-C9A8-8592-1924-6AEDA92B05D1" referredColumn="7BC082CE-154C-5105-8AE7-A99E6722B4DE"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6257B13A-7088-143C-C584-3DE9102C572B" name="CLIENTES_PK">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>53A6DDA4-02E0-ED86-CB02-EB0E9477C2EB</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3B64F55A-5850-4722-D130-30D75895C650"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="31F27D2B-3539-03D8-3721-11D6690FA497" name="CLIENTES__IDX">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<ownerDesignName>michamba</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>88E44FE5-3D71-F19B-DAFF-2E770B189CA4</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="2188D703-754D-DD67-B401-B37041A8C81C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EAFFAEE5-8283-F917-0009-7EFD5E7611CB" name="CLIENTES_USUARIOS_FK">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:55:27 UTC</createdTime>
+<generatorID>88E44FE5-3D71-F19B-DAFF-2E770B189CA4</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2188D703-754D-DD67-B401-B37041A8C81C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

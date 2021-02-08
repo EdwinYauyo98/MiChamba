@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5BE0F9B6-3581-8167-B97C-059AF3F64AE6" name="DISTRITOS">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:07 UTC</createdTime>
+<generatorID>34DF4B9E-CF2E-13D7-9635-74A1D93AD8AF</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id distrito" id="A69BCC93-FB70-D00E-C38F-A5365B7F93BE">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:07 UTC</createdTime>
+<generatorID>73DB0FA0-EF77-4DEB-FCB1-F00257DFDDE3</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="7C3C77AF-BD96-611E-876B-4196F73D9B3C">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:07 UTC</createdTime>
+<generatorID>01406314-51CD-671B-35AF-DC9712804170</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D3509886-4D06-91C9-B6AF-341628DDD6A3" name="DISTRITOSv1 PK">
+<createdBy>adr</createdBy>
+<createdTime>2021-02-08 18:37:07 UTC</createdTime>
+<generatorID>93B8FF25-1C84-0C71-E96C-73AC627B7477</generatorID>
+<ownerDesignName>michamba</ownerDesignName>
+<engineerTo>
+<item key="C2528618-5200-C0A6-340B-2E46AA85ABBC" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A69BCC93-FB70-D00E-C38F-A5365B7F93BE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
