@@ -7,21 +7,26 @@ const e = require("express")
 
 module.exports = app => {
     const connection = dbConnection();
-    app.get('/', (req, res) => {
-        connection.query('SELECT * FROM news', (err, result) => {
+    app.get('/getusers', (req, res) => {
+        connection.query('SELECT * FROM USUARIOS', (err, result) => {
             console.log(result);
             res.json(result);
         });
     }); 
 
-    app.post('/news', (req,res) => {
+    app.post('/adduser', (req,res) => {
 
-        const {title, news} = req.body;
-        connection.query('INSERT INTO news SET?', {
-            title:title,
-            news:news
+        const {dni, nombre, apellido, nick , password, idDISTRITO, idContacto} = req.body;
+        connection.query('INSERT INTO USUARIOS SET?', {
+            dni:dni,
+            nombre:nombre,
+            apellido: apellido,
+            nick: nick,
+            password: password,
+            idDISTRITO: idDISTRITO,
+            idContacto: idContacto
         }, (err, result) => {
-            res.send('Nueva noticia añadida');
+            res.send('Nuevo Usuario añadido');
         });
     });
 }
