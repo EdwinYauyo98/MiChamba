@@ -26,7 +26,11 @@ module.exports = app => {
             idDISTRITO: idDISTRITO,
             idContacto: idContacto
         }, (err, result) => {
-            res.send('Nuevo Usuario añadido');
+            if(!err){
+                res.json("Usuario_añadido");
+            } else{
+                res.json("Usuario_no_añadido");
+            }
         });
     });
 }
