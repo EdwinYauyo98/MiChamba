@@ -14,23 +14,82 @@ module.exports = app => {
         });
     }); 
 
-    app.post('/adduser', (req,res) => {
+    app.get('/getserv', (req, res) => {
+        connection.query('SELECT * FROM SERVICIOS', (err, result) => {
+            console.log(result);
+            res.json(result);
+        });
+    });
 
-        const {dni, nombre, apellido, nick , password, idDISTRITO, idContacto} = req.body;
-        connection.query('INSERT INTO USUARIOS SET?', {
-            dni:dni,
-            nombre:nombre,
-            apellido: apellido,
-            nick: nick,
-            password: password,
-            idDISTRITO: idDISTRITO,
-            idContacto: idContacto
-        }, (err, result) => {
+    app.get('/getdist', (req, res) => {
+        connection.query('SELECT * FROM DISTRITOS', (err, result) => {
+            console.log(result);
+            res.json(result);
+        });
+    });
+
+    app.get('/getcli', (req, res) => {
+        connection.query('SELECT * FROM CLIENTES', (err, result) => {
+            console.log(result);
+            res.json(result);
+        });
+    });
+
+    app.get('/getworker', (req, res) => {
+        connection.query('SELECT * FROM WORKERS', (err, result) => {
+            console.log(result);
+            res.json(result);
+        });
+    });
+
+    app.post('/consultaworker', (req,res) => {
+
+        const {idservicio} = req.body;
+        connection.query('SELECT * FROM USUARIOS WHERE idusuario IN (SELECT idusuario FROM WORKERS WHERE idservicio=?)', 
+            idservicio
+        , (err, result) => {
             if(!err){
-                res.json("Usuario_añadido");
+                res.json(result);
             } else{
-                res.json("Usuario_no_añadido");
+                res.json(err);
             }
         });
+    });
+
+
+    app.post('/adduser', (req,res) => {
+        
+        const {dni, nombre, apellido, nick , password, iddistrito,cuenta_int} = req.body;
+        var validacion="";
+        connection.query('SELECT * FROM USUARIOS WHERE dni=?',
+        dni
+        ,(err, result) => {
+            if(result.length!==0){
+                validacion="usuario duplicado";
+                res.json(validacion);
+            }
+        });
+        
+        if(validacion!=="usuario duplicado"){
+            console.log("q onda");
+            connection.query('INSERT INTO USUARIOS SET?', {
+                dni:dni,
+                nombre:nombre,
+                apellido: apellido,
+                nick: nick,
+                password: password,
+                iddistrito: iddistrito,
+                cuenta_int: cuenta_int
+            }, (err, result) => {
+                if(!err){
+                    res.json("usuario añadido");
+                } else{
+                    res.json("usuario no añadido");
+                    console.log(err);
+                }
+            });
+        }
+
+            
     });
 }
