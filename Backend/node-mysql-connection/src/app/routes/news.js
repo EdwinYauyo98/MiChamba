@@ -57,7 +57,24 @@ module.exports = app => {
     });
 
 
-    app.post('/adduser', (req,res) => {
+    app.post('/login', (req,res) => {
+
+        const {nick,password} = req.body;
+        connection.query('SELECT * FROM USUARIOS WHERE nick=? and password=?',
+           [nick, password], 
+         (err, result) => {
+            if(err)
+                console.log(err);
+            if(result.length!==0){
+                res.json("login correcto");
+            }
+            else
+            res.json("login incorrecto");
+        });
+    });
+
+
+    app.post('/registro', (req,res) => {
         
         const {dni, nombre, apellido, nick , password, iddistrito,cuenta_int} = req.body;
         var validacion="";
