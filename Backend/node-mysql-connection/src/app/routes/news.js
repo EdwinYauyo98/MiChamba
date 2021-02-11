@@ -59,9 +59,9 @@ module.exports = app => {
 
     app.post('/login', (req,res) => {
 
-        const {nick,password} = req.body;
-        connection.query('SELECT * FROM USUARIOS WHERE nick=? and password=?',
-           [nick, password], 
+        const {correo,password} = req.body;
+        connection.query('SELECT * FROM USUARIOS WHERE correo=? and password=?',
+           [correo, password], 
          (err, result) => {
             if(err)
                 console.log(err);
@@ -76,10 +76,10 @@ module.exports = app => {
 
     app.post('/registro', (req,res) => {
         
-        const {dni, nombre, apellido, nick , password, iddistrito,cuenta_int} = req.body;
+        const {dni, nombre, apellido, correo, nick , password, iddistrito,cuenta_int} = req.body;
         var validacion="";
-        connection.query('SELECT * FROM USUARIOS WHERE dni=?',
-        dni
+        connection.query('SELECT * FROM USUARIOS WHERE correo=?',
+        correo
         ,(err, result) => {
             if(result.length!==0){
                 validacion="usuario duplicado";
@@ -93,6 +93,7 @@ module.exports = app => {
                 dni:dni,
                 nombre:nombre,
                 apellido: apellido,
+                correo: correo,
                 nick: nick,
                 password: password,
                 iddistrito: iddistrito,
