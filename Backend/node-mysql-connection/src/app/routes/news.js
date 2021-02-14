@@ -4,7 +4,7 @@ require('../../config/dbConnection');
 
 
 const e = require("express")
-
+var validacion="hola";
 module.exports = app => {
     const connection = dbConnection();
     app.get('/getusers', (req, res) => {
@@ -73,22 +73,12 @@ module.exports = app => {
         });
     });
 
-
+    
     app.post('/registro', (req,res) => {
         
         const {dni, nombre, apellido, correo, nick , password, iddistrito,cuenta_int} = req.body;
-        var validacion="";
-        connection.query('SELECT * FROM USUARIOS WHERE correo=?',
-        correo
-        ,(err, result) => {
-            if(result.length!==0){
-                validacion="usuario duplicado";
-                res.json(validacion);
-            }
-        });
         
-        if(validacion!=="usuario duplicado"){
-            console.log("q onda");
+            
             connection.query('INSERT INTO USUARIOS SET?', {
                 dni:dni,
                 nombre:nombre,
@@ -103,11 +93,11 @@ module.exports = app => {
                     res.json("usuario añadido");
                 } else{
                     res.json("usuario no añadido");
-                    console.log(err);
+                    //console.log(err);
                 }
             });
-        }
-
+        
+        
             
     });
 }
