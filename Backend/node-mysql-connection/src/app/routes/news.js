@@ -60,6 +60,9 @@ module.exports = app => {
     app.post('/login', (req,res) => {
 
         const {correo,password} = req.body;
+        console.log(req.body);
+        console.log(correo);
+        console.log(password);
         connection.query('SELECT * FROM USUARIOS WHERE correo=? and password=?',
            [correo, password], 
          (err, result) => {
