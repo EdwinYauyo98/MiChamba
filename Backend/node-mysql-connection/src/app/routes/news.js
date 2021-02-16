@@ -3,7 +3,8 @@ const dbConnection = require('../../config/dbConnection');
 require('../../config/dbConnection');
 
 
-const e = require("express")
+const e = require("express");
+const { json } = require('body-parser');
 var validacion="hola";
 module.exports = app => {
     const connection = dbConnection();
@@ -42,6 +43,13 @@ module.exports = app => {
         });
     });
 
+    app.get('/getContratos', (req,res) =>{
+        connection.query('SELECT * FROM CONTRATOS', (err,result)=>{
+            console.log(result);
+            res.json(result);
+        })
+    });
+
     app.post('/consultaworker', (req,res) => {
 
         const {idservicio} = req.body;
@@ -58,11 +66,7 @@ module.exports = app => {
 
 
     app.post('/login', (req,res) => {
-
         const {correo,password} = req.body;
-        console.log(req.body);
-        console.log(correo);
-        console.log(password);
         connection.query('SELECT * FROM USUARIOS WHERE correo=? and password=?',
            [correo, password], 
          (err, result) => {
@@ -75,7 +79,6 @@ module.exports = app => {
             res.json("login incorrecto");
         });
     });
-
     
     app.post('/registro', (req,res) => {
         
@@ -96,11 +99,87 @@ module.exports = app => {
                     res.json("usuario añadido");
                 } else{
                     res.json("usuario no añadido");
-                    //console.log(err);
+                    console.log(err);
                 }
             });
         
         
             
+    });
+
+    app.post('/propContrato', (req, res) =>{
+        const {estado,idworker,idcliente} = req.body;
+
+        connection.query('INSERT INTO CONTRATOS SET?', {
+            estado:estado,
+            idworker:idworker,
+            idcliente:idcliente
+        }, (err, result)=>{
+            if(!err){
+                res.json("contrato propuesto");
+            }else{
+                res.json("contrato no propuesto");
+            }
+        });
+
+    });
+
+    app.post('/aceptContrato', (req, res) =>{
+        const {estado, idworker, idcliente} = req.body;
+
+        connection.query('UPDATE CONTRATOS SET estado=? WHERE idworker=? AND idcliente=?',[estado,idworker,idcliente], (err,result) =>{
+            if(!err){
+                res.json("contrato iniciado");
+            }else{
+                res.json("contrato no iniciado");
+            }
+        });
+    });
+
+    app.post('/cancelContrato', (req,res) =>{
+        const {estado,idworker,idcliente} = req.body;
+
+        connection.query('UPDATE CONTRATOS SET estado=? WHERE idworker=? AND idcliente=?',[estado,idworker,idcliente],(err,result) =>{
+            if(!err){
+                res.json("contrato cancelado");
+            }else{
+                res.json("contrato no cancelado");
+            }
+        });
+    });
+
+    app.post('/finContrato', (req,res)=>{
+        const {estado,idworker,idcliente} = req.body;
+
+        connection.query('UPDATE CONTRATOS SET estado=? WHERE idworker=? AND idcliente=?', [estado,idworker,idcliente], (err,result)=>{
+            if(!err){
+                res.json("contrato finalizado");
+            }else{
+                res.json("contrato no finalizado");
+            }
+        });
+    });
+
+    app.post('/editarRol', (req, res) =>{
+        const {idusuario,rol_worker} = req.body;
+
+        connection.query('UPDATE USUARIOS SET rol_worker=? WHERE idusuario=?', [rol_worker, idusuario] ,
+        (err,result) =>{
+            if (!err){
+                res.json("Rol editado");
+            }else{
+                res.json("Rol no editado");
+                console.log(err);
+            }
+        }
+        );
+
+        if (rol_worker == 'TRUE'){
+            connection.query('INSERT INTO WORKERS SET ?', {
+                idusuario:idusuario
+            });
+        }else{
+            connection.query('DELETE FROM WORKERS WHERE idusuario=?', idusuario);
+        }
     });
 }
