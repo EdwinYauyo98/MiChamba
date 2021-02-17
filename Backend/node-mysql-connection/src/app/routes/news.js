@@ -1,5 +1,5 @@
 const dbConnection = require('../../config/dbConnection');
-
+const cors = require('cors');
 require('../../config/dbConnection');
 
 
@@ -7,7 +7,13 @@ const e = require("express");
 const { json } = require('body-parser');
 var validacion="hola";
 module.exports = app => {
+    app.use(cors());
     const connection = dbConnection();
+    
+
+
+
+
     app.get('/getusers', (req, res) => {
         connection.query('SELECT * FROM USUARIOS', (err, result) => {
             console.log(result);
@@ -67,6 +73,9 @@ module.exports = app => {
 
     app.post('/login', (req,res) => {
         const {correo,password} = req.body;
+        console.log(req.body)
+        console.log(correo)
+        console.log(password)
         connection.query('SELECT * FROM USUARIOS WHERE correo=? and password=?',
            [correo, password], 
          (err, result) => {
