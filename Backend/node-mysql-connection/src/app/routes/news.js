@@ -3,11 +3,17 @@ const cors = require('cors');
 require('../../config/dbConnection');
 
 
-const e = require("express");
+const express = require("express");
 const { json } = require('body-parser');
+//const bodyParser = require('body-parser');
 var validacion="hola";
 module.exports = app => {
+<<<<<<< HEAD
     app.use(cors());
+=======
+
+
+>>>>>>> main
     const connection = dbConnection();
     
 
@@ -191,4 +197,94 @@ module.exports = app => {
             connection.query('DELETE FROM WORKERS WHERE idusuario=?', idusuario);
         }
     });
+
+
+
+    // app.use(express.json());
+    // app.use(express.urlencoded());
+
+    app.post('/checkServicio', (req, res) =>
+    {
+    
+        const {idworker,idservicio} = req.body;
+
+        console.log(idworker);
+        console.log(idservicio);
+
+        connection.query('SELECT * FROM SERVICIOS_WORKER WHERE idworker=? AND idservicio=?',[idworker,idservicio],
+        (err,result)=>
+        {
+            if(!err)
+            {
+                if(result.length==0){
+                    //INSERCION DE NUEVO DATO
+                    connection.query('INSERT INTO SERVICIOS_WORKER SET?',{
+                        idworker:idworker,
+                        idservicio:idservicio
+                        },
+                        (err,result)=>
+                        {
+                            if(!err)
+                            {
+                                res.json("servicios INSERTADOS con exito");
+                            }
+                            else
+                            {
+                                res.json("error de actualizacion");
+                                console.log(err);
+                            }
+                            
+                
+                        });  
+                }
+                else{
+                    res.json("IGNORADO");
+                }
+
+                //console.log(result);
+
+            }
+            else
+            {
+                res.json("error de consulta");
+                console.log(err);
+            }
+            
+
+        });             
+ 
+    });
+
+
+
+
+    app.post('/deleteServicio', (req,res)=>{
+
+        const {idworker, idservicio} = req.body;
+
+        connection.query('SELECT * FROM SERVICIOS_WORKER WHERE idworker=? AND idservicio=?',[idworker,idservicio], (err,result) => {
+            if(!err)
+            {
+                console.log('exito de consulta');
+                if(result.length==0){
+                    res.json('tupla no existente');
+                }
+                else{
+                    connection.query('DELETE FROM SERVICIOS_WORKER WHERE idworker=? AND idservicio=?',[idworker,idservicio],(err,result)=>{
+                        if(!err){
+                            res.json('tupla borrada');
+                        }
+                        else{
+                            res.json('tupla no borrada');
+                            console.log(err);
+                        }
+                    });
+                }
+            }else{
+                res.json('error de consulta');
+                console.log(err);
+            }        
+        });
+    });
+
 }
