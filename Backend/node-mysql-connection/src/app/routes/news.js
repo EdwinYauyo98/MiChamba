@@ -8,12 +8,9 @@ const { json } = require('body-parser');
 //const bodyParser = require('body-parser');
 var validacion="hola";
 module.exports = app => {
-<<<<<<< HEAD
+
     app.use(cors());
-=======
 
-
->>>>>>> main
     const connection = dbConnection();
     
 
@@ -29,6 +26,13 @@ module.exports = app => {
 
     app.get('/getserv', (req, res) => {
         connection.query('SELECT * FROM SERVICIOS', (err, result) => {
+            console.log(result);
+            res.json(result);
+        });
+    });
+
+    app.get('/getserviciosworker', (req, res) => {
+        connection.query('SELECT * FROM SERVICIOS_WORKER', (err, result) => {
             console.log(result);
             res.json(result);
         });
@@ -65,7 +69,7 @@ module.exports = app => {
     app.post('/consultaworker', (req,res) => {
 
         const {idservicio} = req.body;
-        connection.query('SELECT * FROM USUARIOS WHERE idusuario IN (SELECT idusuario FROM WORKERS WHERE idservicio=?)', 
+        connection.query('SELECT * FROM USUARIOS WHERE idusuario IN (SELECT idusuario FROM WORKERS WHERE idworker IN (SELECT idworker FROM SERVICIOS_WORKER WHERE idservicio=?))', 
             idservicio
         , (err, result) => {
             if(!err){
