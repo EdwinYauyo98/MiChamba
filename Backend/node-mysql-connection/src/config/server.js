@@ -11,6 +11,9 @@ app.set('views',path.join(__dirname, '../app/views'));
 
 app.use(bodyParser.urlencoded({extended:false}));
 
+
+
+
 module.exports = app;
 
 //middleware
