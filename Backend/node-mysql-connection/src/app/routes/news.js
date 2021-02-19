@@ -38,12 +38,6 @@ module.exports = app => {
         });
     });
 
-    app.get('/getdist', (req, res) => {
-        connection.query('SELECT * FROM DISTRITOS', (err, result) => {
-            console.log(result);
-            res.json(result);
-        });
-    });
 
     app.get('/getcli', (req, res) => {
         connection.query('SELECT * FROM CLIENTES', (err, result) => {
@@ -80,6 +74,25 @@ module.exports = app => {
         });
     });
 
+    app.post('/nombre', (req,res) => {
+        const {idusuario} = req.body;
+        connection.query('SELECT * FROM USUARIOS WHERE idusuario=?',
+           idusuario, 
+         (err, result) => {
+            if(err)
+                console.log(err);
+            if(result.length!==0){
+                res.json(result[0].nombre);
+            }
+            else
+            res.json("no existe usuario");
+        });
+    });
+
+
+
+
+
 
     app.post('/login', (req,res) => {
         const {correo,password} = req.body;
@@ -92,7 +105,8 @@ module.exports = app => {
             if(err)
                 console.log(err);
             if(result.length!==0){
-                res.json("login correcto");
+                
+                res.json(result[0].idusuario);
             }
             else
             res.json("login incorrecto");
@@ -101,7 +115,7 @@ module.exports = app => {
     
     app.post('/registro', (req,res) => {
         
-        const {dni, nombre, apellido, correo, nick , password, iddistrito,cuenta_int} = req.body;
+        const {dni, nombre, apellido, correo, nick , password, distrito,cuenta_int} = req.body;
         
             
             connection.query('INSERT INTO USUARIOS SET?', {
@@ -111,7 +125,7 @@ module.exports = app => {
                 correo: correo,
                 nick: nick,
                 password: password,
-                iddistrito: iddistrito,
+                distrito: distrito,
                 cuenta_int: cuenta_int
             }, (err, result) => {
                 if(!err){
@@ -125,6 +139,31 @@ module.exports = app => {
         
             
     });
+
+    
+    app.post('/editarperfil', (req,res) => {
+        
+        const {dni, nombre, apellido, correo, nick , password, distrito,cuenta_int,telefono_celular,direccion,telefono_fijo,idusuario} = req.body;
+            connection.query('UPDATE CONTRATOS SET ?', {
+                dni:dni,
+                nombre:nombre,
+                apellido: apellido,
+                correo: correo,
+                nick: nick,
+                password: password,
+                distrito: distrito,
+                cuenta_int: cuenta_int
+            }+"WHERE idusuario=?",idusuario, (err, result) => {
+                if(!err){
+                    res.json("usuario actualizado");
+                } else{
+                    res.json("usuario no actualizado");
+                    console.log(err);
+                }
+            });
+            
+            });
+
 
     app.post('/propContrato', (req, res) =>{
         const {estado,idworker,idcliente} = req.body;
@@ -142,6 +181,9 @@ module.exports = app => {
         });
 
     });
+
+
+    
 
     app.post('/aceptContrato', (req, res) =>{
         const {estado, idworker, idcliente} = req.body;
